@@ -60,7 +60,10 @@
             this.cost = cost;
             this.id = ++nbDigitalVideoDiscs;
         }
-    
+        @Override
+        public String toString() {
+            return "DVD - " + title + " - "+ category + " - " + director + " - " + length + " - " + cost+ "$" ;
+        }
         
     }
     
