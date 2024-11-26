@@ -50,6 +50,32 @@
       }
       System.out.println("Total cost: " + totalCost());
       System.out.println("***************************************************");
+
     }
+    public void searchById(int id) {
+    
+      for (int i =0; i< qtyOrdered; i++) {
+          if (itemsOdered[i].getID() == id) {
+              System.out.println("Found DVD: " + itemsOdered[i].toString());
+              return;
+          }
+      }
+      System.out.println("No match found for ID: " + id);
+      }
+  
+  public void searchByTitle(String title) {
+      boolean found = false;
+      for (DigitalVideoDisc disc : itemsOdered) {
+          if (disc != null && disc.isMatch(title)) {
+              System.out.println("Found DVD: " + disc.toString());
+              found = true;
+              break;
+          }
+      }
+      if (!found) {
+          System.out.println("No match found for title: " + title);
+      }
+  }
+  
   }
   
